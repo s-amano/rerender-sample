@@ -10,7 +10,10 @@ function App() {
   return (
     <div className="App" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
       {visible ? <div>loaded</div> : <div>now loading...</div>}
-      <Parent>{memorizedChildren}</Parent>
+      <Parent>
+        {memorizedChildren}
+        {/* <Children /> */}
+      </Parent>
     </div>
   );
 }
