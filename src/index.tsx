@@ -4,6 +4,14 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+if (process.env.NODE_ENV === 'development') {
+  /// <reference types="@welldone-software/why-did-you-render" />
+  const whyDidYouRender = require('@welldone-software/why-did-you-render');
+  whyDidYouRender(React, {
+    trackAllPureComponents: true,
+  });
+}
+
 ReactDOM.render(
   <React.StrictMode>
     <App />
